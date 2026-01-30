@@ -1,0 +1,9 @@
+FROM openjdk:17
+# We are using the basic Java 17 package as base image
+
+COPY target/*.jar app.jar
+# Copying the jar files which are present in the target folder into container
+
+
+ENTRYPOINT ["java","-jar", "/app.jar"]
+# Entrypoint command it will run the command java -jar and point to the app.jar file
